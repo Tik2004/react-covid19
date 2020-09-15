@@ -14,7 +14,6 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
 
       setDailyData(initialDailyData);
     };
-
     fetchMyAPI();
   }, []);
 
@@ -42,6 +41,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
   const lineChart = (
     dailyData[0] ? (
       <Line
+        responsive
         data={{
           labels: dailyData.map(({ date }) => date),
           datasets: [{
@@ -53,7 +53,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
             data: dailyData.map((data) => data.deaths),
             label: 'Deaths',
             borderColor: 'red',
-            backgroundColor: 'rgba(255, 0, 0, 0.5)',
+            backgroundColor: 'rgba(255, 0, 0, 0.7)',
             fill: true,
           },
           ],

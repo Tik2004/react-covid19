@@ -2,6 +2,11 @@ body {
   background-color: rgb(250, 250,250);
 }
 
+.myName {
+  font-size: 2rem;
+  color: #e90f54;
+}
+
 .container {
   display: flex;
   align-items: center;
